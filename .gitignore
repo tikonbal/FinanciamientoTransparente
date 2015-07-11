@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -29,3 +30,35 @@ node_modules
 
 # Ignore .DS_Store files on OS X
 .DS_Store
+=======
+*.dat
+*.DS_Store
+*.gz
+*.log
+*.out
+*.pid
+*.seed
+*.swp
+*.un~
+*.iml
+*.ipr
+*.iws
+.idea/
+*.sublime-*
+
+logs
+node_modules/
+npm-debug.log
+pids
+results
+coverage
+coverage.html
+.cover*
+lib-cov
+
+docs/_dist
+admin/public/styles/auth.css
+admin/public/styles/auth.min.css
+admin/public/styles/keystone.css
+admin/public/styles/keystone.min.css
+>>>>>>> 5d53d0563b8b0fccd70f52a75c3a25c0692a1e00

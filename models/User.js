@@ -14,10 +14,10 @@ User.add({
 	password: { type: Types.Password, initial: true, required: true }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Usuario de Administrador', index: true }
-	isTse: { type: Boolean, label: 'Usuario de Tse', index: true }
-	isOp: { type: Boolean, label: 'Usuario de Op', index: true }
-	isMediocom: { type: Boolean, label: 'Usuario de Medio de Comunicacion', index: true }
-	isAsiosaciones: { type: Boolean, label: 'Usuario de Asiosaciones Civiles', index: true }
+	isTse: { type: Boolean, noedit: true }
+	isOrganizacionp: { type: Boolean, noedit: true }
+	isMediocom: { type: Boolean, noedit: true }
+	isAsiosaciones: { type: Boolean, noedit: true }
 });
 
 // Provide access to Keystone
@@ -25,10 +25,25 @@ User.schema.virtual('canAccessKeystone').get(function() {
 	return this.isAdmin;
 });
 
+User.schema.virtual('canAccessKeystone').get(function() {
+	return this.isTse;
+});
+
+User.schema.virtual('canAccessKeystone').get(function() {
+	return this.isOrganizacionp;
+});
+
+User.schema.virtual('canAccessKeystone').get(function() {
+	return this.isMediocom;
+});
+
+User.schema.virtual('canAccessKeystone').get(function() {
+	return this.isAsiosaciones;
+});
 
 /**
  * Registration
  */
 
-User.defaultColumns = 'name,email, isAdmin';
+User.defaultColumns = 'name,email,isAdmin,isTse,isOrganizacionp,isMediocom,isAsiosaciones';
 User.register();

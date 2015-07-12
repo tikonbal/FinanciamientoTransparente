@@ -15,7 +15,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-
+	'mongo': 'mongodb://130.211.156.135',
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -36,7 +36,7 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-	'consultas': 'enquiries',
+	'contacto': 'enquiries',
 	'usuarios': 'users'
 });
 

@@ -7,15 +7,15 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'FinanciamientoTransparente',
-	'brand': 'FinanciamientoTransparente',
-	
+	'name': 'FIT',
+	'brand': 'FIT',
+
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
@@ -36,8 +36,8 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-	'enquiries': 'enquiries',
-	'users': 'users'
+	'consultas': 'enquiries',
+	'usuarios': 'users'
 });
 
 keystone.start();

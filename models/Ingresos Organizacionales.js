@@ -1,16 +1,16 @@
 var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
-var Ingresos_Pp = new keystone.List('Ingresos_Pp');
+var Ingresos = new keystone.List('Ingresos ');
 
 
-Ingresos_Pp.add({
+Ingresos .add({
     Financista: { type: Types.Relationship, initial: true, ref: 'Financista', unique: true},//, index: true },
   	Banco: { type: Types.Relationship, initial: true, ref: 'Banco', unique: true},//, index: true },
     Monto: { type: Number, index: true },
 
 });
 
-Ingresos_Pp.track = true;
-Ingresos_Pp.defaultColumns = 'Financista,Banco,Monto';
-Ingresos_Pp.register();
+Ingresos .track = true;
+Ingresos .defaultColumns = 'Financista,Banco,Monto';
+Ingresos .register();

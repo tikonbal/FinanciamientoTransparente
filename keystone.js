@@ -9,13 +9,11 @@ keystone.init({
 
 	'name': 'FIT',
 	'brand': 'FIT',
-
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-	'mongo': 'mongodb://130.211.156.135',
 	'auto update': true,
 	'session': true,
 	'auth': true,
